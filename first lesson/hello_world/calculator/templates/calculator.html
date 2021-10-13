@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>My Calculator</h1>
+    <p>Enter first number, then enter the second number, and finally</p>
+    <p>choose the operation: '+', '-', '*', or '/'</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ calc }}
+        <input type="submit"/>
+    </form>
+</body>
+</html>
