@@ -1,0 +1,23 @@
+{% extends 'navbar.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Article Create</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div class="body_website">
+        {% block content %}  
+        <h1>Create Article</h1>
+
+        <div class="form">
+            <h3>Send your messages to Me!</h3>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input  type="submit">
+            </form>
+        </div>
+        </div>
+</body>
+{% endblock %}

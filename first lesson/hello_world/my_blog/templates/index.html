@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    
+</head>
+<body>
+    {% block content %}  
+    {% for article in articles %}
+    <a href="{% url 'article_single' article.id %}">
+    <div class="container">
+        <div class="flex">
+          <div class="card">
+            <img src="{% static article.image.url %}" alt="">
+            <div class="card-body">
+              <h3>{{article.title}}</h3>
+              <p class="description">{{article.short_description}}</p>
+              <div class="created_date">{{article.created_date}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+      {% endblock %}    
+</body>

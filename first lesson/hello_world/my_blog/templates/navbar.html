@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!-- body -->
+<body>
+  <!--header-->
+  <div id="container">
+    <nav>
+        <ul>
+            <li><a href="{% url 'main_page' %}">TravelBlog</a></li>   
+            <li><a href="{% url 'main_page' %}">Home</a></li> 
+            <li><a href="{% url 'create_article' %}">Create Article</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+        </ul>
+    </nav>
+
+</div>
+    <!-- end header end -->   
+    <!--blocks-->
+      {% block content %}
+      {% endblock %}
+
+</body>
+<footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="padding-top: 10px; padding-bottom: 10px;">
+     @All rights reserved 2021-2022
+    </div>
+  </footer>
+</html>

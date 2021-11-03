@@ -1,0 +1,27 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+    <div class="body_website">
+{% block content %}  
+<h1>Travel Blog</h1>
+<div class="images">
+<img src="{% static 'images/travel.png' %}" alt="My image">
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor venenatis risus non viverra. Fusce dignissim dui tortor. Nulla a orci eu nunc sollicitudin venenatis a ac risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam imperdiet id augue malesuada pharetra. Proin in purus lectus. Quisque imperdiet felis mauris. Quisque massa elit, sollicitudin et malesuada non, aliquam sed erat. Etiam id lorem neque. Aliquam eget urna non tortor semper venenatis id sed quam. Maecenas ligula lorem, vehicula ac magna ac, accumsan scelerisque metus. Nam condimentum id purus et sollicitudin. Donec sed nisl eu nulla lacinia faucibus. Nam sed sollicitudin purus. Praesent venenatis tellus vitae eros faucibus posuere.</p>
+
+<div class="form">
+    <h3>Send your messages to Me!</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input  type="submit">
+    </form>
+</div>
+</div>
+</body>
+{% endblock %}
