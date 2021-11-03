@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Form</title>
+</head>
+<body>
+    {% if data %}
+    {% for a in data%}
+    <p>{{a.email}}</p>
+    <p>{{a.first_name}}</p>
+    <p>{{a.last_name}}</P>
+    <p>{{a.message}}</p>
+
+    {% endfor %}
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit">
+    </form>
+</body>
+</html>

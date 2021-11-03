@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'my_blog',
     'test_form',
     'my_app',
     'calculator',
@@ -76,12 +77,16 @@ WSGI_APPLICATION = 'hello_world.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
+DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'NAME': 'blog', 'USER': 'postgres',
+                         'PASSWORD': '1234', 'HOST': 'localhost', 'PORT': '5432'}}
 
 
 # Password validation
@@ -127,7 +132,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'hello_world','static'),
 ]
+MEDIA_ROOT = BASE_DIR / "my_blog/static/media/"
+MEDIA_URL = '/media/'

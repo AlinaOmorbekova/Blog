@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from calculator.forms import MyCalcForm
 # Create your views here.
+# Create your views here.
 def calc_form_url(request):
     answer = 0
     if request.method == "POST":

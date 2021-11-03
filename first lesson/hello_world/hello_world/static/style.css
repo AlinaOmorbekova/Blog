@@ -1,53 +1,163 @@
-h2{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 300;
-    color: #424949 ;
-  }
-h4{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
-    font-weight: 350;
-    color: #424949 ;
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+	background: #212121;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
 }
-.theform{
-    width: 370px;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 55px;
-    padding-bottom: 50px;
-    background-color: white;
+
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
 }
-fieldset {
-    border: medium none;
-    margin: 0 0 10px;
-    padding: 0;
+
+h3 a {
+	color: #FFF;
 }
-input{
-    border: 1px solid #ccc;
-    margin: 0 0 5px;
-    padding: 10px;
-    width: 370px;
+
+a {
+	color: #FFF;
 }
-textarea{
-    width: 370px;
-    border: 1px solid #ccc;
-    background: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
 }
-#btn{
-    margin: 0 0 5px;
-    padding: 10px;
-    width: 395px;
-    border: none;
-    background: #65ad5c;
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 20px 0;
+	background-color: #E64A19;
+}
+
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #E74C3C;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: #F1948A; 
+}
+.images{
+    width: auto;  
+    text-align: center;  
+    padding: 100px;  
+      
+}
+img{
+    max-width: 100%;  
+    height: auto;  
+}
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.form{
+    width: auto;  
+    text-align: center;  
+    padding: 100px;
+    align-items: center;
+}
+footer {
     color: white;
+	margin: 20px 0;
+	background-color: #E64A19;
 }
-#colorlib{
-    text-align: center;
+
+/* cards for main page */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-body{
-    background-color: #65ad5c;
+
+  
+.flex {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: space-around;
+	background: #fff;
+	border-radius: 0.75em;
+	overflow: hidden;
+	box-shadow: 0 0.25em 0.6em #0005, 0 0.65em 1em #0004;
+	transition: transform 270ms ease;
+	position: relative;
+  }
+  
+  .card::before {
+	content: "";
+	position: absolute;
+	display: flex;
+	inset: 0;
+	isolation: isolate;
+	mix-blend-mode: color;
+	opacity: 0;
+  }
+  
+  .card:hover::before {
+	opacity: 1;
+  }
+  .card:hover {
+	transform: scale(1.05);
+	background-color: #FAE5D3 ;
+  }  
+p {
+	color: #0009;
+	font-weight: 700;
+	text-align: center;
+  }
+.created_date{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}  
+.description{
+	padding: 20px;
 }
